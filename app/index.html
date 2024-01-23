@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/30vXFGN/favicon.png">
+</head>
+<body>
+  <div id="main-menu" style="display: block;">
+    <img id="trivia-logo" src="https://i.ibb.co/zfLkZdq/trivia-logo.png">
+    <label for="category-select">Choose a category:</label>
+    <select name="categories" id="category-select">
+    </select>
+    <img id="play-button" src="https://i.ibb.co/zQt6nmP/play-button.png">
+  </div>
+
+
+
+  <div id="game-play" style="display: none;">
+    <div id="game-container">
+      <div id="screen">
+        <h2>question</h2>
+      </div>
+      <div id="answer-buttons">
+        <img src="https://i.ibb.co/RyRDDPZ/answer-button.png" alt="choice-one">
+        <img src="https://i.ibb.co/RyRDDPZ/answer-button.png" alt="choice-two">
+        <img src="https://i.ibb.co/RyRDDPZ/answer-button.png" alt="choice-three">
+        <img src="https://i.ibb.co/RyRDDPZ/answer-button.png" alt="choice-four">
+      </div>
+    </div>
+  </div>
+
+  <div id="score-page" style="display: none;"></div>
+
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
