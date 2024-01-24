@@ -9,25 +9,40 @@
 </head>
 <body>
   <div id="main-menu" style="display: block;">
-    <img id="trivia-logo" src="https://i.ibb.co/zfLkZdq/trivia-logo.png">
-    <label for="category-select">Choose a category:</label>
-    <select name="categories" id="category-select">
-    </select>
+    <header>
+      <img id="company-logo" src="https://i.ibb.co/Yh6482N/pickle-productions-logo.png" alt="company-logo">
+    </header>
+    <div id="welcome-container">
+      <img id="trivia-logo" src="https://i.ibb.co/zfLkZdq/trivia-logo.png">
+      <label id="title" for="category-select">Choose a Category:</label>
+      <select name="categories" id="category-select">
+      </select>
+    </div>
+    <div id="game-start">
     <img id="play-button" src="https://i.ibb.co/zQt6nmP/play-button.png">
+    </div>
   </div>
 
 
 
   <div id="game-play" style="display: none;">
-    <div id="game-container">
-      <div id="screen">
-        <h2>question</h2>
-      </div>
-      <div id="answer-buttons">
-        <img src="https://i.ibb.co/RyRDDPZ/answer-button.png" alt="choice-one">
-        <img src="https://i.ibb.co/RyRDDPZ/answer-button.png" alt="choice-two">
-        <img src="https://i.ibb.co/RyRDDPZ/answer-button.png" alt="choice-three">
-        <img src="https://i.ibb.co/RyRDDPZ/answer-button.png" alt="choice-four">
+      <div id="game-container">
+        <img src="https://i.ibb.co/d650hjJ/Screen.png" alt="Snow" id="screen">
+        <div id="words-box">
+          <h2 class="question-text" id="question">question</h2>
+        </div>
+        <div id="answer-buttons">
+          <div id="row-one">
+            <div class="answer" id="one">Answer</div>
+            <div class="answer" id="two">Answer</div>
+          </div>
+          <div id="row-two">
+            <div class="answer" id="three">Answer</div>
+            <div class="answer" id="four">Answer</div>
+          </div>
+        </div>
+      <div id="next-container">
+        <img id="next-button" src="https://i.ibb.co/hs030CR/next-3.png" alt="next-button">
       </div>
     </div>
   </div>

@@ -36,3 +36,16 @@ export const getCategories = async () => {
 
   return triviaCategories
 };
+
+export const getQuestions = async (id) => {
+    const [data, error] = await fetchData(`https://opentdb.com/api.php?amount=10&category=${id}&difficulty=medium&type=multiple`);
+
+    if (error) {
+      console.error("Error fetching:", error);
+      return;
+    }
+
+    return data
+}
+
+
