@@ -1,0 +1,89 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "In the Super Mario Bros. series, what game is the \"Carrot\" power-up from?",
+      "correct_answer": "Super Mario Land 2: The 6 Golden Coins",
+      "incorrect_answers": [
+        "Super Mario World",
+        "Super Mario Land",
+        "Super Mario 3D Land"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "What was the name of the canceled projected by Blizzard Entertainment that would be later become Overwatch?",
+      "correct_answer": "Titan",
+      "incorrect_answers": ["Omnic", "Omega", "Ghost"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "The walls of the Goldenrod City Gym in \"Pokémon Gold and Silver\" are arranged in the shape of which Pokémon?",
+      "correct_answer": "Clefairy",
+      "incorrect_answers": ["Bulbasaur", "Pikachu", "Pidgey"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "What is the name of the currency in the \"Animal Crossing\" series?",
+      "correct_answer": "Bells",
+      "incorrect_answers": ["Sea Shells", "Leaves", "Bugs"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "The protagonist in the game \"Cave Story\" is named",
+      "correct_answer": "Quote",
+      "incorrect_answers": ["Kazuma", "Curly", "Arthur"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "Which occupation did John Tanner, the main protagonist for Driver and Driver 2, had before turning into an undercover cop?",
+      "correct_answer": "Racing Driver",
+      "incorrect_answers": ["Taxi Driver", "Delivery Driver", "Getaway Driver"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "Who was the mascot of SEGA before \"Sonic the Hedgehog\"?",
+      "correct_answer": "Alex Kidd",
+      "incorrect_answers": ["Opa Opa", "NiGHTS", "Ristar"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "Which of the following characters is NOT a female marriage candidate in the game Stardew Valley?",
+      "correct_answer": "Caroline",
+      "incorrect_answers": ["Abigail", "Haley", "Leah"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "In \"Fallout 4\", what is the name of the dog you find at Red Rocket truck stop?",
+      "correct_answer": "Dogmeat",
+      "incorrect_answers": ["Sparky", "Quazar", "Chop"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "On which planet does the game Freedom Planet (2014) take place?",
+      "correct_answer": "Avalice",
+      "incorrect_answers": ["Freedom", "Galaxytrail", "Shang Mu"]
+    }
+  ]
+}

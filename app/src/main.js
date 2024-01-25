@@ -1,54 +1,54 @@
-import { fetchData, getCategories, getQuestions } from './fetching.js';
-import { displayCategories} from './rendering.js';
-import { initGame, playRound, handleScore} from './game.js';
+import { fetchData, getCategories, getQuestions } from "./fetching.js";
+import { displayCategories } from "./rendering.js";
+import { initGame, playRound, displayScore, handleScore } from "./game.js";
 
 let questionsData = null;
+const music = new Audio('src/audio/2 Minutes Countdown Timer with Relaxing Jazz Background Music.mp3')
 
 const main = async () => {
-    try {
-        const categories = await getCategories();
-        //console.log(categories);
-        displayCategories(categories)
-    } catch (error) {
-        console.error(error.message);
-    }
-}
-
-
+  try {
+    const categories = await getCategories();
+    displayCategories(categories);
+  } catch (error) {
+    console.error(error.message);
+  }
+};
 
 main();
 
-const categorySelect = document.querySelector('#category-select');
-
-// categorySelect.addEventListener('change', async(event) => {
-//     const roundQuestions = await getQuestions(event.target.value)
-//     return roundQuestions
-// });
-
+const categorySelect = document.querySelector("#category-select");
 const playButton = document.querySelector("#play-button");
-// playButton.addEventListener('click', function() {
-//     document.querySelector("#game-play").style.display = 'block';
-//     document.querySelector("#main-menu").style.display = 'none';
-//     initGame()
-//     playRound(arr);
-// });
 
-categorySelect.addEventListener('change', async(event) => {
-    questionsData = await getQuestions(event.target.value);
-    //console.log(questionsData)
+categorySelect.addEventListener("change", async (event) => {
+  console.log('change occurred')
+  questionsData = await getQuestions(event.target.value);
 });
 
-playButton.addEventListener('click', function() {
-    console.log(questionsData)
-    if (questionsData) {
-        document.querySelector("#game-play").style.display = 'block';
-        document.querySelector("#main-menu").style.display = 'none';
-        initGame();
-        playRound(questionsData);
-    } else {
-        console.error('No questions data available');
-    }
+playButton.addEventListener("click", function () {
+  console.log(questionsData);
+  if (questionsData) {
+    document.querySelector("#game-play").style.display = "block";
+    document.querySelector("#main-menu").style.display = "none";
+    initGame();
+    playRound(questionsData);
+    music.play()
+  } else {
+    console.error("No questions data available");
+  }
 });
+
+const next = document.getElementById("next-button");
+next.addEventListener("click", () => {
+  playRound(questionsData);
+});
+
+
+
+
+
+
+
+
 
 
 

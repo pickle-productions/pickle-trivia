@@ -1,55 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trivia</title>
-  <link rel="stylesheet" href="./src/style.css">
-  <link rel="icon" type="image/x-icon" href="https://i.ibb.co/30vXFGN/favicon.png">
-</head>
-<body>
-  <div id="main-menu" style="display: block;">
-    <header>
-      <img id="company-logo" src="https://i.ibb.co/Yh6482N/pickle-productions-logo.png" alt="company-logo">
-    </header>
-    <div id="welcome-container">
-      <img id="trivia-logo" src="https://i.ibb.co/zfLkZdq/trivia-logo.png">
-      <label id="title" for="category-select">Choose a Category:</label>
-      <select name="categories" id="category-select">
-      </select>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivia</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.ibb.co/30vXFGN/favicon.png"
+    />
+  </head>
+  <body>
+    <div id="main-menu" style="display: block">
+      <header>
+        <img
+          id="company-logo"
+          src="https://i.ibb.co/Yh6482N/pickle-productions-logo.png"
+          alt="company-logo" class="floating"
+        />
+      </header>
+      <div id="welcome-container">
+        <img id="trivia-logo" src="https://i.ibb.co/zfLkZdq/trivia-logo.png" />
+        <label id="title" for="category-select">Choose a Category:</label>
+        <select name="categories" id="category-select"></select>
+      </div>
+      <div id="game-start">
+        <img id="play-button" src="https://i.ibb.co/zQt6nmP/play-button.png" />
+      </div>
     </div>
-    <div id="game-start">
-    <img id="play-button" src="https://i.ibb.co/zQt6nmP/play-button.png">
-    </div>
-  </div>
 
-
-
-  <div id="game-play" style="display: none;">
+    <div id="game-play" style="display: none">
+      <header>
+        <img
+          id="company-logo"
+          src="https://i.ibb.co/Yh6482N/pickle-productions-logo.png"
+          alt="company-logo" class="floating"
+        />
+      </header>
       <div id="game-container">
-        <img src="https://i.ibb.co/d650hjJ/Screen.png" alt="Snow" id="screen">
+        <!-- <img src="https://i.ibb.co/d650hjJ/Screen.png" alt="Snow" id="screen" /> -->
         <div id="words-box">
           <h2 class="question-text" id="question">question</h2>
         </div>
         <div id="answer-buttons">
-          <div id="row-one">
-            <div class="answer" id="one">Answer</div>
-            <div class="answer" id="two">Answer</div>
-          </div>
-          <div id="row-two">
-            <div class="answer" id="three">Answer</div>
-            <div class="answer" id="four">Answer</div>
-          </div>
+          <button class="answer" id="one">The millenise Nightingale, tintin</button>
+          <button class="answer" id="two">Saphira Crystal Padre</button>
+          <button class="answer" id="three">Monet Exchange All stars three</button>
+          <button class="answer" id="four">Mr.Bean intro music</button>
+        </div>        
+        <div id="next-container">
+          <img
+            id="next-button"
+            src="https://i.ibb.co/hs030CR/next-3.png"
+            alt="next-button"
+          />
         </div>
-      <div id="next-container">
-        <img id="next-button" src="https://i.ibb.co/hs030CR/next-3.png" alt="next-button">
       </div>
     </div>
-  </div>
 
-  <div id="score-page" style="display: none;"></div>
+    <div id="score-page" style="display: none">
+      <header>
+        <img
+          id="company-logo"
+          src="https://i.ibb.co/Yh6482N/pickle-productions-logo.png"
+          alt="company-logo"
+        />
+      </header>
+      <div id="welcome-container">
+        <img id="trivia-logo" src="https://i.ibb.co/zfLkZdq/trivia-logo.png" />
+        <div>
+          <img src="" />
+          <h2>Here's How you did!</h2>
+          <h2 id="score">SCORE:</h2>
+        </div>
+      </div>
+    </div>
 
-
-  <script type="module" src="./src/main.js"></script>
-</body>
+    <script type="module" src="./src/main.js"></script>
+  </body>
 </html>
