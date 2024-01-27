@@ -1,3 +1,4 @@
+
 let score = 0;
 let round = 0;
 
@@ -58,9 +59,7 @@ export function displayScore(score){
   scoreHolder.innerText = `SCORE: ${score}/10`
 }
 
-adjustFontSize()
-
-export function playRound(arr) {
+export function playRound(arr,) {
   if (round === 0) {
     document.getElementById("score-page").style.display = "block";
     document.getElementById("main-menu").style.display = "none";
@@ -85,41 +84,38 @@ export function playRound(arr) {
     document.getElementById("four").textContent = answers[3];
     handleScore(arr);
     round--;
-    console.log(round)
   }
 }
 
+
+
+
 export function handleScore(stuff) {
   const answerButtons = document.querySelectorAll(".answer");
+  let answered = false;
+
   answerButtons.forEach((button) => {
     button.addEventListener("click", function () {
-      const userSelection = this.textContent;
-      const correctAnswer = stuff.results[round].correct_answer;
-      console.log(correctAnswer)
+      if (!answered) { 
+        const userSelection = this.textContent;
+        const correctAnswer = stuff.results[round].correct_answer;
 
-      let buttonBoard = document.querySelectorAll(".answer");
-      buttonBoard.forEach((button) => {
         if (userSelection === correctAnswer) {
-          // button.style.border = "1px solid #1ba937"; // Correct answer
           button.style.boxShadow = "0 0 10px green";
-          let correctRound = true
-          console.log(score)
+          score++;
+          console.log('This is your score', score);
         } else {
-          // Incorrect answer: Smaller red border with glow effect
-          // button.style.border = "1px solid red";
           button.style.boxShadow = "0 0 10px red";
         }
 
-        if(correctAnswer === true){
-          score++;
-        }
+        button.classList.add('answered');
+        answered = true;
+      }
 
-        setTimeout(() => {
-          // Reset styles after a shorter duration, e.g., 1000 milliseconds
-          button.style.border = "";
-          button.style.boxShadow = "";
-        }, 1000);
-      });
+      setTimeout(() => {
+        button.style.border = "";
+        button.style.boxShadow = "";
+      }, 1000);
     });
   });
 }
