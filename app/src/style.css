@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mukta:wght@600&family=Open+Sans:ital,wght@0,400;0,500;1,300;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,400;0,500;1,300;1,500&display=swap");
+
 * {
   margin: 0;
   font-family: "Mukta", sans-serif;
@@ -16,10 +20,6 @@ html {
   box-sizing: border-box;
   overflow-x: hidden
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Mukta:wght@600&family=Open+Sans:ital,wght@0,400;0,500;1,300;1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,400;0,500;1,300;1,500&display=swap");
 
 #welcome-container {
   padding: 10vh;
