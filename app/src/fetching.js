@@ -24,66 +24,66 @@ export const fetchData = async (url, options = {}) => {
   }
 };
 
-// export const getCategories = async () => {
-
-//   let [data, error] = await fetchData("https://opentdb.com/api_category.php");
-//   // const [data, error] = await fetchData("https://api.jsonserve.com/_s8suy");
-
-//   if (error) {
-//     data = categoriesJson
-//     console.error("Error fetching categories, using local JSON instead:", error);
-//     return categoriesJson;
-//   }
-
-//   const triviaCategories = data.trivia_categories;
-
-//   return triviaCategories;
-// };
-
-// export const getQuestions = async (id) => {
-//   // const [data, error] = await fetchData(
-//   //   `https://api.jsonserve.com/1Vpkmi`
-//   // );
-//   let [data, error] = await fetchData(
-//     `https://opentdb.com/api.php?amount=10&category=${id}&difficulty=medium&type=multiple`
-//   );
-
-//   if (error) {
-//     data = questionsJson
-//     console.error("Error fetching, using local json instead:", error);
-//     return;
-//   }
-
-//   return data;
-// };
-
 export const getCategories = async () => {
-  // let [data, error] = await fetchData("https://opentdb.com/api_category.php");
-  let [data, error] = [null, Error('fetch')]
+
+  let [data, error] = await fetchData("https://opentdb.com/api_category.php");
+  // const [data, error] = await fetchData("https://api.jsonserve.com/_s8suy");
 
   if (error) {
+    data = categoriesJson
     console.error("Error fetching categories, using local JSON instead:", error);
-    data = categoriesJson;
-    console.log(data)
+    return categoriesJson;
   }
 
   const triviaCategories = data.trivia_categories;
+
   return triviaCategories;
 };
 
 export const getQuestions = async (id) => {
-  // let [data, error] = await fetchData(
-  //   `https://opentdb.com/api.php?amount=10&category=${id}&difficulty=medium&type=multiple`
+  // const [data, error] = await fetchData(
+  //   `https://api.jsonserve.com/1Vpkmi`
   // );
-
-  let [data, error] = [null, Error('api down')]
-
+  let [data, error] = await fetchData(
+    `https://opentdb.com/api.php?amount=10&category=${id}&difficulty=medium&type=multiple`
+  );
 
   if (error) {
+    data = questionsJson
     console.error("Error fetching, using local json instead:", error);
-    data = questionsJson;
+    return;
   }
 
   return data;
 };
+
+// export const getCategories = async () => {
+//   // let [data, error] = await fetchData("https://opentdb.com/api_category.php");
+//   let [data, error] = [null, Error('fetch')]
+
+//   if (error) {
+//     console.error("Error fetching categories, using local JSON instead:", error);
+//     data = categoriesJson;
+//     console.log(data)
+//   }
+
+//   const triviaCategories = data.trivia_categories;
+//   return triviaCategories;
+// };
+
+// export const getQuestions = async (id) => {
+//   // let [data, error] = await fetchData(
+//   //   `https://opentdb.com/api.php?amount=10&category=${id}&difficulty=medium&type=multiple`
+//   // );
+
+//   let [data, error] = [null, Error('api down')]
+
+
+//   if (error) {
+//     console.error("Error fetching, using local json instead:", error);
+//     data = questionsJson;
+//   }
+
+//   return data;
+// };
 
