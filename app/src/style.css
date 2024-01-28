@@ -184,7 +184,7 @@ header {
   background-image: url("https://i.ibb.co/mTnNhSx/answer-button.png");
   background-size: 19vw 7vw;
   background-repeat: no-repeat;
-  /* font-size: 3vw; */
+  font-size: 2vw; 
   text-align: center;
   line-height: 1;
   padding: 30px;
@@ -194,7 +194,7 @@ header {
   overflow: hidden;
   white-space: normal;
   transition: border 0.3s ease, box-shadow 0.3s ease;
-}
+} 
 
 .answer:hover {
   animation: glowing 4s infinite alternate;
