@@ -7,6 +7,7 @@ export const initGame = () => {
   round = 10;
 };
 
+const click = new Audio('src/audio/Click.wav')
 
 
 // const convertHTML = () => {
@@ -96,6 +97,7 @@ export function handleScore(stuff) {
 
   answerButtons.forEach((button) => {
     button.addEventListener("click", function () {
+      click.play()
       if (!answered) { 
         const userSelection = this.textContent;
         const correctAnswer = stuff.results[round].correct_answer;
@@ -119,3 +121,4 @@ export function handleScore(stuff) {
     });
   });
 }
+

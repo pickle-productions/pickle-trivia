@@ -18,7 +18,7 @@ html {
   overflow-x: hidden;
   font-size: 10px;
   box-sizing: border-box;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 #welcome-container {
@@ -77,13 +77,12 @@ html {
   align-items: center;
   justify-content: space-around;
   padding: 1vw;
-  background-image: url('https://i.ibb.co/d650hjJ/Screen.png');
+  background-image: url("https://i.ibb.co/d650hjJ/Screen.png");
   background-size: 50% auto;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
 }
-
 
 #score-page {
   background-image: url("https://i.ibb.co/DCBGrCv/Backround.png");
@@ -114,7 +113,7 @@ header {
   padding: 2vw;
 }
 
-.floating {  
+.floating {
   animation-name: floating;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -122,9 +121,15 @@ header {
 }
 
 @keyframes floating {
-  0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 7px); }
-  100%   { transform: translate(0, -0px); }    
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 7px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
 }
 
 #game-start {
@@ -154,6 +159,12 @@ header {
   transition: 0.3s;
 }
 
+#play-button:hover {
+  width: 7vw;
+  height: 7vw;
+  animation: glowing 5000ms infinite;
+}
+
 #answer-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -165,12 +176,12 @@ header {
   transform: translate(-50%, -10%); */
 }
 
-.answer{
+.answer {
   width: 19vw;
   height: 7vw;
   border-radius: 10px;
   border: 0;
-  background-image: url('https://i.ibb.co/mTnNhSx/answer-button.png'); 
+  background-image: url("https://i.ibb.co/mTnNhSx/answer-button.png");
   background-size: 19vw 7vw;
   background-repeat: no-repeat;
   /* font-size: 3vw; */
@@ -182,15 +193,13 @@ header {
   justify-content: center;
   overflow: hidden;
   white-space: normal;
-  transition: border 0.3s ease, box-shadow 0.3s ease; 
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .answer:hover {
   animation: glowing 4s infinite alternate;
   transition: border 0.4s ease;
 }
-
 
 #next-container {
   width: 100vw;
@@ -201,14 +210,18 @@ header {
 }
 
 #next-container > * {
-  margin-right: 4vw; /* adjust the value as needed */
+  margin-right: 4vw;
 }
-
-
 
 #next-button {
   width: 10%;
   animation: glowing 5000ms infinite;
+}
+
+#next-button:hover {
+  width: 11%;
+  animation: glowing 5000ms infinite;
+  transition: 0.3s;
 }
 
 @keyframes glowing {
@@ -230,7 +243,6 @@ header {
   }
 }
 
-
 #words-box {
   font-size: 1.5vw;
   display: flex;
@@ -240,9 +252,8 @@ header {
   height: 35%;
   z-index: 10;
   text-align: center;
-  margin-top: 15%; /* Adjust this to position the words box */
+  margin-top: 15%;
 }
-
 
 @keyframes glow {
   from {
@@ -250,5 +261,63 @@ header {
   }
   to {
     box-shadow: 0 0 10px 7px #fffcf8;
+  }
+}
+
+#end-container {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1vw;
+  background-image: url("https://i.ibb.co/q7JQ57L/10164326.png");
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+#score {
+  font-size: 4vw;
+}
+
+#text-end {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    font-size: 5px;
+  }
+
+  #title,
+  #score,
+  #text-end {
+    font-size: 5vw;
+  }
+
+  #game-container,
+  #score-page,
+  #end-container {
+    background-size: 100% auto;
+  }
+
+  #answer-buttons {
+    grid-template-columns: 1fr;
+    gap: 4vw;
+  }
+
+  #words-box {
+    width: 80%;
+    font-size: 4vw;
+  }
+
+  #game-play,
+  #main-menu {
+    flex-direction: column;
   }
 }
