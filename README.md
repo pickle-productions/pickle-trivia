@@ -8,7 +8,7 @@
  - Track their progress and view their total score at the end
 
 ## Team
-  - __Development Team Members__: Justin Watson, Rafi Barides
+  - __Development Team Members__: [Justin Watson](https://github.com/Twincasper), [Rafi Barides](https://github.com/Rafibarides)
 
 ## Table of Contents
 
